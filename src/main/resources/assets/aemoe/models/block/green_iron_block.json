@@ -1,0 +1,6 @@
+{
+	"parent":"block/cube_all",
+	"textures":{
+		"all": "aemoe:blocks/green_iron_block"
+	}
+}
