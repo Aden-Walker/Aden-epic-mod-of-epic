@@ -6,13 +6,16 @@ import org.apache.logging.log4j.Logger;
 
 import com.aemoe.Main;
 import com.aemoe.lists.BlockList;
+import com.aemoe.lists.FoodList;
 import com.aemoe.lists.ItemList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -30,7 +33,8 @@ public class RegistryEvents {
 		(
 			ItemList.green_iron = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("green_iron")),
 			ItemList.green_iron_katana = new Item(new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("green_iron_katana")),
-			ItemList.green_iron_block = new BlockItem(BlockList.green_iron_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.green_iron_block.getRegistryName())
+			ItemList.green_iron_block = new BlockItem(BlockList.green_iron_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.green_iron_block.getRegistryName()),
+			ItemList.green_iron_soup = new Item(new Item.Properties().group(ItemGroup.FOOD).food(FoodList.green_iron_soup)).setRegistryName(location("green_iron_soup"))
 			
 		);
 		
@@ -44,6 +48,16 @@ public class RegistryEvents {
 		(
 				
 			BlockList.green_iron_block = new Block(Block.Properties.create(Material.ANVIL).sound(SoundType.ANVIL).hardnessAndResistance(3)).setRegistryName(location("green_iron_block"))
+		);
+	}
+	
+	
+	@SubscribeEvent
+	public static void registerFluids(final RegistryEvent.Register<Fluid> event) {
+		event.getRegistry().registerAll
+		(
+				
+			
 		);
 	}
 	

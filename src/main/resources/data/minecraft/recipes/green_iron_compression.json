@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        "iii",
+        "iii"
+    ],
+    "key": {
+        "i": {
+            "item": "aemoe:green_iron"
+        }
+    },
+    "result": {
+        "item": "aemoe:green_iron_block",
+        "count": 1
+    }
+}
